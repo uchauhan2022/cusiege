@@ -120,7 +120,7 @@ $(document).ready(function(){
 	$.get('pre.php',function(data){
 		  $('#questions_div').html(data);
 		  });
-	$(document).on('click'.'question_div',function(){
+	$(document).on('click','.question_div',function(){
 		var array=this.id.split(':');
 		$.post('pre.php?question',{qid:array[1]},function(data){
 			$('#option_div'+array[1]).html(data);
