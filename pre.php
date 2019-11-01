@@ -16,6 +16,12 @@ if(isset($_GET['question'])){
 			echo '<input type="submit" value="Save Answer" id="button"><br><br>
 			';
 }
+elseif(isset($_GET['marks'])){
+	$qid=mysqli_real_escape_string($_POST['qid']);
+	$query=mysqli_query($dbconfig,"SELECT score from pre_lev1 where questionid=$qid");
+	$res=mysqli_fetch_array($query);
+	echo $res;
+}
 else{
 	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev1 where questionid NOT IN (SELECT qid FROM answers where userid={$_SESSION['userid']})");
 		while($res=mysqli_fetch_array($query))

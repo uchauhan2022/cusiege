@@ -121,10 +121,10 @@ $(document).ready(function(){
 		  $('#questions_div').html(data);
 		  });
 	setTimeout(function(){
-		for(var i=0;i<10;i++){
+		for(i=0;i<10;i++){
 			$.post('pre.php?marks',{qid:i},function(data){
-				$('#marks_div:'.i).html(data);
+				$('#marks_div:'+i).html(data);
 			});
 		}
-	},3000)
+	},3000);
 });</script>
