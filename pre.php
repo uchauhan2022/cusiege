@@ -9,7 +9,7 @@ if(isset($_GET['question'])){
 	<h3>Options</h3>";
   					for($op=1;$op<5;$op++)
     				{
-						echo '<div class="radiobtn"><input type="radio" name="'.$op.'" id="'.$op.'" value="'.$res['choice'.$op].'"<label for="'.$op.'">'.$res['choice'.$op].'</label></div>';
+						echo '<div class="radiobtn"><input type="radio" name="'.$res['questionid'].'" id="'.$op.'" value="'.$res['choice'.$op].'"<label for="'.$op.'">'.$res['choice'.$op].'</label></div>';
 						echo '<br> <br>';
 						
 					}
