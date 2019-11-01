@@ -129,6 +129,5 @@ function process(){
 			});}
 	setTimeout(function(){
 		process();
-		
 	},10000)
 }</script>
