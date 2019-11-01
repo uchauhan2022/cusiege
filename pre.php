@@ -20,7 +20,7 @@ elseif(isset($_GET['marks'])){
 	$qid=mysqli_real_escape_string($dbconfig,$_POST['qid']);
 	$query=mysqli_query($dbconfig,"SELECT score from pre_lev1 where questionid=$qid");
 	$res=mysqli_fetch_array($query);
-	echo $res['score'];
+	echo 'Marks:'.$res['score'];
 }
 elseif(isset($_GET['submit'])){
 	$qid=mysqli_real_escape_string($dbconfig,$_POST['qid']);
