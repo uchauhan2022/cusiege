@@ -51,13 +51,7 @@ if((!isset($_SESSION['username'])))
 		  }
 		  elseif($_SESSION['lev']==1)
 		  			{
-						 echo'<iframe width="100%" height="100%" align="right" src="rule1.php" frameborder="0" allowtransparency="true"></iframe>';
-					} elseif($_SESSION['lev']==2)
-		  			{
-						 echo'<iframe width="100%" height="100%" align="right" src="rule2.php" frameborder="0" allowtransparency="true"></iframe>';
-					}elseif($_SESSION['lev']==3)
-		  			{
-						 echo'<iframe width="100%" height="100%" align="right" src="rule3.php" frameborder="0" allowtransparency="true"></iframe>';
+						 echo'<div id="rules"></div>';
 					}
 		  ?></body>
 </html>
@@ -114,3 +108,13 @@ var st = srvTime();
 
 
 </script> 
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+	$.get('rule1.php',function(data){
+		$('#rules').html(data);
+	})
+});</script>
