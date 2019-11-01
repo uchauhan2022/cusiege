@@ -139,7 +139,7 @@ $(document).ready(function(){
 			$('#score_div').html(data);
 			
 		});
-	};
+	});
 });
 	process();
 	
