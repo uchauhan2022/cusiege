@@ -15,7 +15,7 @@ header("location:play.php")
 </head>
 
 <body> 
-<div id="wrapperlog" class='divlog'><div class='divlog'><form method="post" action="Assets/php/su">
+<div id="wrapperlog" class='divlog'><div class='divlog'><form method="post" action="Assets/php/su.php">
                <center><img src="CCSLOGO.png"  class="img">
                <?php
 					if(isset($_SESSION['captcha']))
