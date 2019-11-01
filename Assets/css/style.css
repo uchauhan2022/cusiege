@@ -45,7 +45,7 @@ form {
   transform: translate(-50%, -50%);
   border-radius: 1%;
   margin-top: 5%;
- 
+  background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(0, 0, 00, 0.70);
   color: white;
   overflow:auto;
