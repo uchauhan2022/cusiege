@@ -116,8 +116,8 @@ var st = srvTime();
 $(document).ready(function(){
 	$.get('rule1.php',function(data){
 		$('#rules').html(data);
-	})
-	$.get('pre.php',function(data)){
+	});
+	$.get('pre.php',function(data){
 		  $('#questions_div').html(data);
-		  }
+		  });
 });</script>
