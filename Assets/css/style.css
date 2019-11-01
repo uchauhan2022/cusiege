@@ -53,6 +53,9 @@ form {
   width:80%;
 
 }
+#question_div{
+	display: inline-block;
+}
 
 #textbox1 {
     height: 2em;
