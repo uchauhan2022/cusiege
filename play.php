@@ -130,4 +130,5 @@ function process(){
 	setTimeout(function(){
 		process();
 		
-	},3000)}</script>
+	},3000)}
+}</script>
