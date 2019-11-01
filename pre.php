@@ -2,7 +2,7 @@
 session_start();
 include('dbconfig.php');
 if(isset($_GET['question'])){
-	$qid=mysqli_real_escape_string($_POST['qid']);
+	$qid=mysqli_real_escape_string($dbconfig,$_POST['qid']);
 	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev1 where quentionid=$qid");
 	$res=mysqli_fetch_array($query);
 	echo "
