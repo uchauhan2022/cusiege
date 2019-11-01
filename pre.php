@@ -27,7 +27,7 @@ elseif(isset($_GET['submit'])){
 	$answer=mysqli_real_escape_string($dbconfig,$_POST['answer']);
 	$query=mysqli_query($dbconfig, "SELECT * from pre_lev1 where questionid=$qid");
 	$res=mysqli_fetch_array($query);
-	if($res['choice'.$res['answer']==$answer]){
+	if($res['choice'.$res['answer']]==$answer){
 		$query=mysqli_query($dbconfig,"UPDATE pre_lev1 set score=score-1 where questionid=$qid");
 		$query=mysqli_query($dbconfig,"UPDATE result set score=score+{$res['score']} where userid={$_SESSION['userid']}");
 	}
