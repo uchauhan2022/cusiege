@@ -120,7 +120,6 @@ $(document).ready(function(){
 	$.get('pre.php',function(data){
 		  $('#questions_div').html(data);
 		  });
-	process();
 	$('.question_inner_div').on('click',function(){
 		var array=this.id.split(':');
 		$.post('pre.php?question',{qid:array[1]},function(data){
@@ -128,6 +127,8 @@ $(document).ready(function(){
 		});
 	});
 });
+	process();
+	
 function process(){
 		
 			$.post('pre.php?marks',{qid:1},function(data){
