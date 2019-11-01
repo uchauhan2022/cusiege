@@ -7,7 +7,8 @@ else
 	
 	{
 		$_SESSION['table']="lev1";
-		header("location:guide.php");
+		$_SESSION['started']=1;
+		header("location:play.php");
 	}
 }
 ?>

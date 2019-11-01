@@ -41,7 +41,7 @@ else
 	if($lol)
 
 	{
-		date_default_timezone_set("Asia/Kolkata");
+		
 		$_SESSION['stime']=date("M d Y H:i:s");
 		$_SESSION['start']=1;
 		

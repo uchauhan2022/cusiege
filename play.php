@@ -46,8 +46,8 @@ if((!isset($_SESSION['username'])))
 		  }
 		  elseif(isset($_SESSION['start']))
 			 {
-			  echo'<iframe width="70%" height="100%" align="right" src="ui.php" name="ui" frameborder="0" allowtransparency="true"></iframe>
-    <iframe width="28%" height="100%" align="left" src="qlist.php" name="qlist" frameborder="0" allowtransparency="true"></iframe>';
+			  
+			  echo'<div id="questions_div"></div>';	
 		  }
 		  elseif($_SESSION['lev']==1)
 		  			{
@@ -117,4 +117,7 @@ $(document).ready(function(){
 	$.get('rule1.php',function(data){
 		$('#rules').html(data);
 	})
+	$.get('pre.php',function(data)){
+		  $('#questions_div').html(data);
+		  }
 });</script>
