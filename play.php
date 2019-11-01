@@ -126,9 +126,9 @@ function process(){
 		for(i=0;i<10;i++){
 			$.post('pre.php?marks',{qid:i},function(data){
 				$('#marks_div:'+i).html(data);
-			});
+			});}
 	setTimeout(function(){
 		process();
 		
-	},10000)}
+	},10000)
 }</script>
