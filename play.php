@@ -120,11 +120,14 @@ $(document).ready(function(){
 	$.get('pre.php',function(data){
 		  $('#questions_div').html(data);
 		  });
-	setTimeout(function(){
+	process();
+});
+function process(){
 		for(i=0;i<10;i++){
 			$.post('pre.php?marks',{qid:i},function(data){
 				$('#marks_div:'+i).html(data);
 			});
+	setTimeout(function(){
+		process();
 		}
-	},3000);
-});</script>
+	},3000)}</script>
