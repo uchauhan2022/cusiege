@@ -14,7 +14,7 @@ header("location:Assets/php/redirect.php")
 </head>
 
 <body>
-<div id="wrapperlog" class='divlog'><div class='divlog'><form method="post" action="Assets/php/login" >
+<div id="wrapperlog" class='divlog'><div class='divlog'><form method="post" action="Assets/php/login.php" >
                <center><img src="CCSLOGO.png" class="img">
                <?php if(isset($_SESSION["register"]))
                echo "<br><br> You've been sucessfully registered please LogIn to continue.";
