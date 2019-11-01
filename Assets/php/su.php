@@ -2,13 +2,7 @@
 session_start();
 include("dbconfig.php");
 $ic=mysqli_real_escape_string($dbconfig,$_POST['ic']);  
-    if($ic!="siege_ccs")
-        {
-    $_SESSION["ic"]=1;
-    header("location:../../signup.php");
-}
-
- else if($_SERVER["REQUEST_METHOD"] == "POST")
+if($_SERVER["REQUEST_METHOD"] == "POST")
 {
 	      
         
