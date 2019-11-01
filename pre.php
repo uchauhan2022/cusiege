@@ -13,7 +13,7 @@ if(isset($_GET['question'])){
 						echo '<br> <br>';
 						
 					}
-			echo '<input type="submit" value="Save Answer" class="save_answer_button" id="save_answer:'.$res['questionid'].'"><br><br>
+			echo '<input type="submit" value="Save Answer" class="save_answer_button button" id="save_answer:'.$res['questionid'].'"><br><br>
 			';
 }
 elseif(isset($_GET['marks'])){
@@ -28,10 +28,13 @@ elseif(isset($_GET['submit'])){
 	$query=mysqli_query($dbconfig, "SELECT * from pre_lev1 where questionid=$qid");
 	$res=mysqli_fetch_array($query);
 	if($res['option'.$res['answer']==$answer]){
+		$query=mysqli_query($dbconfig,"UPDATE pre_lev1 set score=score-1 where questionid=$qid");
 		$query=mysqli_query($dbconfig,"UPDATE result set score=score+{$res['score']} where userid={$_SESSION['userid']}");
 	}
-	else
+	else{
+		$query=mysqli_query($dbconfig,"UPDATE pre_lev1 set score=score+1 where questionid=$qid");
 		$query=mysqli_query($dbconfig,"UPDATE result set score=score-{$res['score']} where userid={$_SESSION['userid']}");
+	}
 	$query=mysqli_query($dbconfig,"insert into answers (userid,qid,answer) VALUES ({$_SESSION['userid']},$qid,'$answer')");
 	$score=mysqli_query($dbconfig,"SELECT score from result where userid={$_SESSION['userid']}");
 	echo $score;
