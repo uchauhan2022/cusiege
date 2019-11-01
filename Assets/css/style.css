@@ -114,7 +114,7 @@ form {
 }
 
 
-#button {
+.button {
     height: 3em;
     width: 23em	;
     font-family: 'Roboto Condensed', sans-serif;
@@ -129,23 +129,23 @@ form {
     
 }
 
-#button:hover {
+.button:hover {
     background-color: rgba(255, 255, 255, 0.5);
     color:black;
 }
-#button1:hover {
+.button1:hover {
     background-color: rgba(255, 255, 255, 0.5);
     color:black;
 }
-#button2:hover {
+.button2:hover {
     background-color: rgba(255, 255, 255, 0.5);
     color:black;
 }
-#button4:hover {
+.button4:hover {
     background-color: rgba(255, 255, 255, 0.5);
     color:black;
 }
-#button1 {
+.button1 {
     height: 50px;
     width: 400px;
     font-family: 'Roboto Condensed', sans-serif;
@@ -159,7 +159,7 @@ form {
     font-size: 15px;
     
 }
-#button2 {
+.button2 {
     height: 50px;
     width: 400px;
     font-family: 'Roboto Condensed', sans-serif;
@@ -173,7 +173,7 @@ form {
     font-size: 15px;
     
 }
-#button4 {
+.button4 {
     height: 3em;
     width: 8em;
     font-family: 'Roboto Condensed', sans-serif;
