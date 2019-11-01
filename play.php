@@ -55,7 +55,7 @@ if((!isset($_SESSION['username'])))
 					}
 		  ?></body>
 </html>
- <script type="text/javascript">
+ <!--<script type="text/javascript">
 	var xmlHttp;
 function srvTime(){
     try {
@@ -107,11 +107,11 @@ var st = srvTime();
 	
 
 
-</script> 
-<!--<script
+</script> -->
+<script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>-->
+  crossorigin="anonymous"></script>
 <script>
 $(document).ready(function(){
 	$.get('rule1.php',function(data){
