@@ -117,9 +117,7 @@ $(document).ready(function(){
 	$.get('rule1.php',function(data){
 		$('#rules').html(data);
 	});
-	$.get('pre.php',function(data){
-		  $('#questions_div').html(data);
-		  });
+	get_questions();
 	$(document).on('click','.question_div',function(){
 		var array=this.id.split(':');
 		$.post('pre.php?question',{qid:array[1]},function(data){
@@ -137,10 +135,16 @@ $(document).ready(function(){
 				   else{}
 				
 			$('#score_div').html(data);
+				get_questions();
 			
 		});
 	});
 });
+	function get_questions(){
+		$.get('pre.php',function(data){
+		  $('#questions_div').html(data);
+		  });
+	}
 	process();
 	
 function process(){
