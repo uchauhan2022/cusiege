@@ -66,6 +66,9 @@ form {
 .marks_div{
 	display: inline-block;
 }
+.question_inner_div{
+	display: inline-block;
+}
 
 #textbox1 {
     height: 2em;
