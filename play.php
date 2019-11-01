@@ -82,7 +82,7 @@ function srvTime(){
     xmlHttp.send('');
     return xmlHttp.getResponseHeader("Date");
 }
-	 var deadline = Date.parse(<?php echo '"'.$_SESSION['stime'].'"';?>)+<?php if($_SESSION['lev']==1)
+	 var deadline = <?php if($_SESSION['lev']==1)
 	echo '1230000';
 		 elseif ($_SESSION['lev']==2)
 			 echo '1530000';
