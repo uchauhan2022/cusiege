@@ -55,6 +55,13 @@ form {
 }
 .question_div{
 	display: inline-block;
+	width: 90%;
+    float: left;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    word-wrap: break-word;
+    height: fit-content;
+    color: black;
 }
 
 #textbox1 {
