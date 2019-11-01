@@ -20,7 +20,7 @@ if((!isset($_SESSION['username'])))
       
    <center>	
 		<embed src="L1.pdf" height="85%" width="100%" type="application/pdf"></embed><br><br>
-		<form action="lev1" target="_parent" method="post">
+		<form action="lev1.php" target="_parent" method="post">
 			<input type="submit" id="button" value="Start">
 		</form></center>
 		</body>
