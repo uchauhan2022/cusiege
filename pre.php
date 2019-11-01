@@ -36,8 +36,9 @@ elseif(isset($_GET['submit'])){
 		$query=mysqli_query($dbconfig,"UPDATE results set score=score-{$res['score']} where userid={$_SESSION['userid']}");
 	}
 	$query=mysqli_query($dbconfig,"insert into answers (userid,qid,answer) VALUES ({$_SESSION['userid']},$qid,'$answer')");
-	$score=mysqli_query($dbconfig,"SELECT score from results where userid={$_SESSION['userid']}");
-	echo $score;
+	$query=mysqli_query($dbconfig,"SELECT score from results where userid={$_SESSION['userid']}");
+	$result=mysqli_fetch_array($query);
+	echo $result['score'];
 		
 	}
 
