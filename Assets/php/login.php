@@ -21,13 +21,13 @@ unset($_SESSION['pass']);
     $txt = "Logged in at  --> Time ".$now."\n";
     fwrite($myfile, $txt);
     fclose($myfile);
-header("location:redirect");
+header("location:redirect.php");
 echo $_SESSION['username'];
 }
 else
 {
 $_SESSION['pass']=1;
-header("location:../../index");
+header("location:../../index.php");
 }
 }
 ?>

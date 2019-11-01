@@ -3,7 +3,7 @@ session_start();
 include('dbconfig.php');
 if((!isset($_SESSION['username']))||(!isset($_SESSION['score'])))
 	{
-		header("location:../../index");
+		header("location:../../index.php");
 	}
 else if ($_SERVER['REQUEST_METHOD']=="POST")
 {
@@ -33,7 +33,7 @@ else if ($_SERVER['REQUEST_METHOD']=="POST")
 			$_SESSION['wa']=1;
 			}
 		
-	header("location:redirect");
+	header("location:redirect.php");
 }
 	
 ?>

@@ -19,9 +19,9 @@ if(isset($_SESSION['username']))
 	}
 	else if ($count==0)
 	{
-		header("location:Assets/php/enter");
+		header("location:Assets/php/enter.php");
 	}
 	}
 	else
-	header("location:../../index")
+	header("location:../../index.php")
 	?>

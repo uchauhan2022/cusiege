@@ -5,7 +5,7 @@ $ic=mysqli_real_escape_string($dbconfig,$_POST['ic']);
     if($ic!="siege_ccs")
         {
     $_SESSION["ic"]=1;
-    header("location:../../signup");
+    header("location:../../signup.php");
 }
 
  else if($_SERVER["REQUEST_METHOD"] == "POST")
@@ -32,13 +32,13 @@ $ic=mysqli_real_escape_string($dbconfig,$_POST['ic']);
     if($count==1)
         {
             $_SESSION["email"]=1;
-	        header("location:../../signup");
+	        header("location:../../signup.php");
         }
 
     else if($count1==1)
         {
             $_SESSION["userex"]=1;
-	        header("location:../../signup");
+	        header("location:../../signup.php");
 	        
         }
     else 
@@ -48,7 +48,7 @@ $ic=mysqli_real_escape_string($dbconfig,$_POST['ic']);
 	                unset($_SESSION["userex"]);
 	                unset($_SESSION["email"]);
 	                unset($_SESSION["ic"]);
-                    header("location:../../index");
+                    header("location:../../index.php");
                     echo $update;
                     echo $username;
             

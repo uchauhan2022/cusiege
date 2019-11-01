@@ -9,7 +9,7 @@ if(isset($_SESSION['username']))
 		include('dbconfig.php');
 	$update=mysqli_query($dbconfig,"UPDATE leaderboards_cryptex SET score='9' WHERE user='$user'");
 }
-	header("location:redirect");
+	header("location:redirect.php");
 	
 }
 ?>

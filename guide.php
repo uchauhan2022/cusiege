@@ -26,7 +26,7 @@ if(mysqli_num_rows($result)!=0)
 
 {
 $_SESSION['atm']=1;
-	header('location:play');
+	header('location:play.php');
 
 }
 
@@ -46,9 +46,9 @@ else
 		$_SESSION['start']=1;
 		
 		if($_SESSION['lev']!=3)
-		header("location:pre");
+		header("location:pre.php");
 		else
-			header('location:play');
+			header('location:play.php');
 
 	}
 

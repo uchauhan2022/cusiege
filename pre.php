@@ -76,7 +76,7 @@ $_SESSION['tie']=$tie;
 $_SESSION['choices']=$choices;  
 
 $_SESSION['numq']=$num_questions_returned;
-header('location:play');
+header('location:play.php');
 
   ?>
 

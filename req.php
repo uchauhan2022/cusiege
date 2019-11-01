@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['username']))
-	header('location:index');
+	header('location:index.php');
 elseif($_SERVER['REQUEST_METHOD']=="POST")
 {
 	
@@ -15,7 +15,7 @@ elseif($_SERVER['REQUEST_METHOD']=="POST")
 	{
 		$_SESSION['lul']=1;
 		unset($_SESSION['i']);
-		header('location:play');
+		header('location:play.php');
 	}
 	else{
 		
@@ -27,7 +27,7 @@ if(mysqli_num_rows($result)!=0)
 
 {
 $_SESSION['cr2']=1;
-	header('location:play');
+	header('location:play.php');
 
 }
 		else{
@@ -36,7 +36,7 @@ $_SESSION['cr2']=1;
 	if($lol)
 	{
 		$_SESSION['cr']=1;
-		header('location:finish');
+		header('location:finish.php');
 	}}
 	
 }}

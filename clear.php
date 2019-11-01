@@ -1,12 +1,12 @@
 <?php
 session_start();
 if(!isset($_SESSION['username']))
-	header('location:index');
+	header('location:index.php');
 elseif($_SERVER['REQUEST_METHOD']=="POST")
 {
 	$i=$_SESSION['i'];
 	unset($_SESSION['gans'][$i]);
 	$_SESSION['clear']=1;
-	header('location:play');
+	header('location:play.php');
 }
 ?>

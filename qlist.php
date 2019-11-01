@@ -2,7 +2,7 @@
 session_start();
 if((!isset($_SESSION['username'])))
 	{
-		header("location:index");
+		header("location:index.php");
 	}
 	if($_SESSION['lev']==3)
 		include('pre3.php');

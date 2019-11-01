@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['username']))
-	header('location:index');
+	header('location:index.php');
 elseif($_SERVER['REQUEST_METHOD']=="POST")
 {
 	$score=0;
@@ -27,7 +27,7 @@ elseif($_SERVER['REQUEST_METHOD']=="POST")
 	if($lol)
 	{
 		$_SESSION['check']=1;
-		header('location:finish');
+		header('location:finish.php');
 	}
 	
 }

@@ -7,6 +7,6 @@ elseif($_SERVER['REQUEST_METHOD']=="POST")
 	$i=$_SESSION['i'];
 	$_SESSION['gans'][$i]=$_POST[$i];
 	$_SESSION['save']=1;
-	header('location:play');
+	header('location:play.php');
 }
 ?>

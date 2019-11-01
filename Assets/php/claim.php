@@ -4,7 +4,7 @@ include('dbconfig.php');
 include("scorer.php");
 if((!isset($_SESSION['username']))||($_SESSION['score']<1))
 	{
-		header("location:Assets/php/redirect");
+		header("location:Assets/php/redirect.php");
 	}
 else if($_SERVER['REQUEST_METHOD']=="POST")	
 {
@@ -25,4 +25,4 @@ $score=$_SESSION['score'];
     fwrite($myfile, $txt);
     fclose($myfile);
 	$update=mysqli_query($dbconfig,"UPDATE leaderboards_cryptex SET h='$h' WHERE username='$user'");
-	header("location:../../hints");}}?>
+	header("location:../../hints.php");}}?>
