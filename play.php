@@ -123,10 +123,37 @@ $(document).ready(function(){
 	process();
 });
 function process(){
-		for(i=0;i<10;i++){
-			$.post('pre.php?marks',{qid:i},function(data){
-				$('#marks_div'+i).html(data);
-			});}
+		
+			$.post('pre.php?marks',{qid:1},function(data){
+				$('#marks_div1').html(data);
+			});
+	$.post('pre.php?marks',{qid:2},function(data){
+				$('#marks_div2').html(data);
+			});
+	$.post('pre.php?marks',{qid:3},function(data){
+				$('#marks_div3').html(data);
+			});
+	$.post('pre.php?marks',{qid:4},function(data){
+				$('#marks_div4').html(data);
+			});
+	$.post('pre.php?marks',{qid:5},function(data){
+				$('#marks_div5').html(data);
+			});
+	$.post('pre.php?marks',{qid:6},function(data){
+				$('#marks_div6').html(data);
+			});
+	$.post('pre.php?marks',{qid:7},function(data){
+				$('#marks_div7').html(data);
+			});
+	$.post('pre.php?marks',{qid:8},function(data){
+				$('#marks_div8').html(data);
+			});
+	$.post('pre.php?marks',{qid:9},function(data){
+				$('#marks_div9').html(data);
+			});
+	$.post('pre.php?marks',{qid:10},function(data){
+				$('#marks_div10').html(data);
+			});
 	setTimeout(function(){
 		process();
 	},10000)
