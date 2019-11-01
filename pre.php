@@ -29,14 +29,14 @@ elseif(isset($_GET['submit'])){
 	$res=mysqli_fetch_array($query);
 	if($res['choice'.$res['answer']]==$answer){
 		$query=mysqli_query($dbconfig,"UPDATE pre_lev1 set score=score-1 where questionid=$qid");
-		$query=mysqli_query($dbconfig,"UPDATE result set score=score+{$res['score']} where userid={$_SESSION['userid']}");
+		$query=mysqli_query($dbconfig,"UPDATE results set score=score+{$res['score']} where userid={$_SESSION['userid']}");
 	}
 	else{
 		$query=mysqli_query($dbconfig,"UPDATE pre_lev1 set score=score+1 where questionid=$qid");
-		$query=mysqli_query($dbconfig,"UPDATE result set score=score-{$res['score']} where userid={$_SESSION['userid']}");
+		$query=mysqli_query($dbconfig,"UPDATE results set score=score-{$res['score']} where userid={$_SESSION['userid']}");
 	}
 	$query=mysqli_query($dbconfig,"insert into answers (userid,qid,answer) VALUES ({$_SESSION['userid']},$qid,'$answer')");
-	$score=mysqli_query($dbconfig,"SELECT score from result where userid={$_SESSION['userid']}");
+	$score=mysqli_query($dbconfig,"SELECT score from results where userid={$_SESSION['userid']}");
 	echo $score;
 		
 	}
