@@ -33,7 +33,7 @@ elseif(isset($_GET['submit'])){
 	}
 	else{
 		$query=mysqli_query($dbconfig,"UPDATE pre_lev1 set score=score+1 where questionid=$qid");
-		$query=mysqli_query($dbconfig,"UPDATE results set score=score-{$res['score']} where userid={$_SESSION['userid']}");
+		//$query=mysqli_query($dbconfig,"UPDATE results set score=score-{$res['score']} where userid={$_SESSION['userid']}");
 	}
 	$query=mysqli_query($dbconfig,"insert into answers (userid,qid,answer) VALUES ({$_SESSION['userid']},$qid,'$answer')");
 	$query=mysqli_query($dbconfig,"SELECT score from results where userid={$_SESSION['userid']}");
