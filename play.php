@@ -27,7 +27,11 @@ if((!isset($_SESSION['username'])))
 	<div><span class="hours" id="hours">00</span><div class="smalltext">Hours</div></div>
 	<div><span class="minutes" id="minutes">00</span><div class="smalltext">Minutes</div></div>
 	<div><span class="seconds" id="seconds">00</span><div class="smalltext">Seconds</div></div>
-	</div></div><form method="post" action="check.php" name="finalSubmit"></form>'; 
+	</div></div><form method="post" action="finish.php" name="finalSubmit"></form>
+	<ul class="sub_navbarul">
+  <li class="sub_navbarli"><a href="">Score:<div id="score_div">0</div></a></li>
+  
+</ul>'; 
 			 }
 		  else
 		  {

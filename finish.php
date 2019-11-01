@@ -18,6 +18,6 @@ session_start();
 		  session_destroy();
 		  ?>
      	<h4>You've been logged out.</h4>
-     	<h4>Click <a href="index">here</a> to login again.</h4>
+     	<h4>Click <a href="index.php">here</a> to login again.</h4>
 		  </center></div></div></body>
 </html>
