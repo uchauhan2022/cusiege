@@ -17,7 +17,7 @@ if(isset($_GET['question'])){
 			';
 }
 else{
-	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev1 where questionid NOT IN (SELECT * FROM answers where userid={$_SESSION['userid']})");
+	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev1 where questionid NOT IN (SELECT qid FROM answers where userid={$_SESSION['userid']})");
 		while($res=mysqli_fetch_array($query))
 		{
 			echo'<div class="question_div" id="question_div:'.$res['questionid'].'"><pre>'.$res['question'].'</pre><div id="marks_div:"'.$res['questionid'].'">'.$res['score'].'</div></div>';
