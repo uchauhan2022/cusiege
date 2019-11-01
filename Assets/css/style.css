@@ -341,6 +341,9 @@ font-size:30px;
   width:110%;
 
 }
+.option_div{
+	display: block;
+}
 pre
 {
 	display: inherit;
