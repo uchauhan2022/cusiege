@@ -183,6 +183,36 @@ function process(){
 	$.post('pre.php?marks',{qid:10},function(data){
 				$('#marks_div10').html(data);
 			});
+	$.post('pre.php?marks',{qid:11},function(data){
+				$('#marks_div11').html(data);
+			});
+	$.post('pre.php?marks',{qid:12},function(data){
+				$('#marks_div12').html(data);
+			});
+	$.post('pre.php?marks',{qid:13},function(data){
+				$('#marks_div13').html(data);
+			});
+	$.post('pre.php?marks',{qid:14},function(data){
+				$('#marks_div14').html(data);
+			});
+	$.post('pre.php?marks',{qid:15},function(data){
+				$('#marks_div15').html(data);
+			});
+	$.post('pre.php?marks',{qid:16},function(data){
+				$('#marks_div16').html(data);
+			});
+	$.post('pre.php?marks',{qid:17},function(data){
+				$('#marks_div17').html(data);
+			});
+	$.post('pre.php?marks',{qid:18},function(data){
+				$('#marks_div18').html(data);
+			});
+	$.post('pre.php?marks',{qid:19},function(data){
+				$('#marks_div19').html(data);
+			});
+	$.post('pre.php?marks',{qid:20},function(data){
+				$('#marks_div20').html(data);
+			});
 	setTimeout(function(){
 		process();
 	},10000)
