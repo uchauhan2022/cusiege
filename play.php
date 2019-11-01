@@ -108,10 +108,10 @@ var st = srvTime();
 
 
 </script> 
-<script
+<!--<script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script>-->
 <script>
 $(document).ready(function(){
 	$.get('rule1.php',function(data){
