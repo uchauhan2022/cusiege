@@ -39,12 +39,12 @@ if((!isset($_SESSION['username'])))
 		  ?>
     
      <?php
-		  if(isset($_SESSION['atm']))
-		  {
-			  echo "<div id='wrapper' class='div'> <div class='div'>
-		<center><h2>You have already attempted the quiz</h2></center></div></div>";
-		  }
-		  elseif(isset($_SESSION['start']))
+//		  if(isset($_SESSION['atm']))
+//		  {
+//			  echo "<div id='wrapper' class='div'> <div class='div'>
+//		<center><h2>You have already attempted the quiz</h2></center></div></div>";
+//		  }
+		  if(isset($_SESSION['start']))
 			 {
 			  
 			  echo'<div id="questions_div"></div>';	
