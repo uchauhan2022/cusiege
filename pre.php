@@ -9,11 +9,11 @@ if(isset($_GET['question'])){
 	<h3>Options</h3>";
   					for($op=1;$op<5;$op++)
     				{
-						echo '<div class="radiobtn"><input type="radio" name="'.$res['questionid'].'" id="'.$res['questionid'].'-'.$op.'" value="'.$res['choice'.$op].'"><label for="'.$res['questionid'].'-'.$op.'">'.$res['choice'.$op].'</label></div>';
+						echo '<div class="radiobtn"><input type="radio" name="'.$res['questionid'].'" class="quesradio'.$res['questionid'].'" id="'.$res['questionid'].'-'.$op.'" value="'.$res['choice'.$op].'"><label for="'.$res['questionid'].'-'.$op.'">'.$res['choice'.$op].'</label></div>';
 						echo '<br> <br>';
 						
 					}
-			echo '<input type="submit" value="Save Answer" id="button"><br><br>
+			echo '<input type="submit" value="Save Answer" class="save_answer_button" id="save_answer:'.$res['questionid'].'"><br><br>
 			';
 }
 elseif(isset($_GET['marks'])){
@@ -22,6 +22,22 @@ elseif(isset($_GET['marks'])){
 	$res=mysqli_fetch_array($query);
 	echo $res['score'];
 }
+elseif(isset($_GET['submit'])){
+	$qid=mysqli_real_escape_string($dbconfig,$_POST['qid']);
+	$answer=mysqli_real_escape_string($dbconfig,$_POST['answer']);
+	$query=mysqli_query($dbconfig, "SELECT * from pre_lev1 where questionid=$qid");
+	$res=mysqli_fetch_array($query);
+	if($res['option'.$res['answer']==$answer]){
+		$query=mysqli_query($dbconfig,"UPDATE result set score=score+{$res['score']} where userid={$_SESSION['userid']}");
+	}
+	else
+		$query=mysqli_query($dbconfig,"UPDATE result set score=score-{$res['score']} where userid={$_SESSION['userid']}");
+	$query=mysqli_query($dbconfig,"insert into answers (userid,qid,answer) VALUES ({$_SESSION['userid']},$qid,'$answer')");
+	$score=mysqli_query($dbconfig,"SELECT score from result where userid={$_SESSION['userid']}");
+	echo $score;
+		
+	}
+
 else{
 	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev1 where questionid NOT IN (SELECT qid FROM answers where userid={$_SESSION['userid']})");
 		while($res=mysqli_fetch_array($query))

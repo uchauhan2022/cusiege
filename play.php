@@ -126,6 +126,20 @@ $(document).ready(function(){
 			$('#option_div'+array[1]).html(data);
 		});
 	});
+	$(document).on('click','.save_answer_button',function(){
+		
+		var array=this.id.split(':');
+		var answer=$('.quesradio'+array[1]+':checked').val();
+		$.post('pre.php?submit',{qid:array[1],answer:answer},function(data)
+			   {var score=$('#score_div').val();
+			   if(data>score){}
+				
+				   else{}
+				
+			$('#score_div').html(data);
+			
+		});
+	};
 });
 	process();
 	
