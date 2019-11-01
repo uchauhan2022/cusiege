@@ -7,9 +7,9 @@ if(isset($_GET['question'])){
 	$res=mysqli_fetch_array($query);
 	echo "
 	<h3>Options</h3>";
-  					for($op=0;$op<4;$op++)
+  					for($op=1;$op<5;$op++)
     				{
-						echo '<div class="radiobtn"><input type="radio" name="'.$i.'" id="'.$op.'" value="'.$res['choice'.$op].'"<label for="'.$op.'">'.$res['choice'.$op].'</label></div>';
+						echo '<div class="radiobtn"><input type="radio" name="'.$op.'" id="'.$op.'" value="'.$res['choice'.$op].'"<label for="'.$op.'">'.$res['choice'.$op].'</label></div>';
 						echo '<br> <br>';
 						
 					}
