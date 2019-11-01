@@ -26,7 +26,7 @@ else{
 	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev1 where questionid NOT IN (SELECT qid FROM answers where userid={$_SESSION['userid']})");
 		while($res=mysqli_fetch_array($query))
 		{
-			echo'<div class="question_div" id="question_div:'.$res['questionid'].'"><div class="question_inner_div">'.$res['question'].'</div><div id="marks_div'.$res['questionid'].'"class="marks_div">'.$res['score'].'</div><div class="option_div" id="option_div'.$res['questionid'].'"></div></div>';
+			echo'<div class="question_div" id="question_div:'.$res['questionid'].'"><div class="question_inner_div">'.$res['question'].'</div><div id="marks_div'.$res['questionid'].'"class="marks_div">'.$res['score'].'</div></div><div class="option_div" id="option_div'.$res['questionid'].'"></div>';
 			
 		}
 }
