@@ -121,7 +121,7 @@ $(document).ready(function(){
 		  $('#questions_div').html(data);
 		  });
 	process();
-	$('.question_div').on('click',function(){
+	$('.question_inner_div').on('click',function(){
 		var array=this.id.split(':');
 		$.post('pre.php?question',{qid:array[1]},function(data){
 			$('#option_div'+array[1]).html(data);
