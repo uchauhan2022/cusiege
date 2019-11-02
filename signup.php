@@ -27,7 +27,7 @@ header("location:play.php")
 					else if (isset($_SESSION["userex"]))
 					echo "<br><br>The username is already taken. Please try using another username."?>
                 <h1><b>SIGN UP</b></h1><input type="text" placeholder="Team Name" id="textbox" name="name" required><br><br><input type="email" placeholder="Email" id="textbox" name="email" required><br><br><input type="text" placeholder="Username" id="textbox" name="username" required><br><br><input type="text" placeholder="Secret Code" id="textbox" name="ic" required><br><br>
-            <input type="Password" placeholder="Password" id="textbox2" name="password" required><br><br><input type="Password" placeholder="Confirm Password" id="textbox1" name="password1" required><br><br><input type="submit" id="button" value="SignUp"><br><br>Already have an account? <a href='index'>Log In</a>
+            <input type="Password" placeholder="Password" id="textbox2" name="password" required><br><br><input type="Password" placeholder="Confirm Password" id="textbox1" name="password1" required><br><br><input type="submit" id="button" value="SignUp"><br><br>Already have an account? <a href='index.php'>Log In</a>
  </center>
         </form></div></div>
 </body>
