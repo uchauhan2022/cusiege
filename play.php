@@ -110,6 +110,9 @@ var downloadTimer = setInterval( function () {
 
 	function get_questions() {
 		$.get( 'pre.php', function ( data ) {
+			if(data==1)
+				document . finalSubmit . submit();
+			else
 			$( '#questions_div' ).html( data );
 		} );
 	}
