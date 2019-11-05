@@ -27,7 +27,7 @@ if((!isset($_SESSION['username'])))
 	   <ul style='align:left;'><li> Time- 1.5 hours </li><br>
 <li>Venue- Online Individual Participation </li><br>
 <li>1 Round 20 Questions </li><br>
-<li>Base Weightage of Each question- 20 points</li><br>
+<li>Base Weightage of Each question- 40 points</li><br>
 <li>If some participant answers a question right, the value of that question decreases by 1 point, while if the question is answered wrong by a participant, the value of that increases by 1 point.</li><br>
  <li>If the participant answers right, then he/she is awarded the points according to the value of the question at the same time. </li><br>
 <li>Any question can have a maximum weightage of 40 points. </li><br>
