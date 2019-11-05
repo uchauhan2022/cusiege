@@ -26,7 +26,7 @@ if((!isset($_SESSION['username'])))
 		  <?php
 		  $now=strtotime('now');
 		  if(!$_SESSION['is_admin'] && $now<strtotime('05 November 2019 21:30:00'))
-		  echo 'Quiz will start ar 9:30 PM.';
+		  echo '<div style="color:white">Event will start at 9:30 PM.</div>';
 		  else 
 			 echo'
 		<form action="lev1.php" target="_parent" method="post">
