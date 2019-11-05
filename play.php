@@ -30,7 +30,7 @@ if ( ( !isset( $_SESSION[ 'username' ] ) ) ) {
 	';
 	} else {
 		echo '<ul class="sub_navbarul">
-  <li class="sub_navbarli"><a href="finish">Logout</a></li>
+  <li class="sub_navbarli"><a href="finish.php">Logout</a></li>
   
 </ul>';
 	}
