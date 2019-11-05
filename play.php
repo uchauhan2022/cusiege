@@ -50,8 +50,8 @@ if ( ( !isset( $_SESSION[ 'username' ] ) ) ) {
 	}
 	?>
 </body>
-</html> <
-script type = "text/javascript" >
+</html> 
+<script type = "text/javascript">
 
 	var deadline = <?php
 if ( $_SESSION[ 'lev' ] == 1 )
