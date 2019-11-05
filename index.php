@@ -9,6 +9,7 @@ header("location:Assets/php/redirect.php")
 <meta charset="utf-8">
 <link rel="stylesheet" href="Assets/css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <title>Login</title>
   <link rel='icon' href='icon/favicon.ico' type='image/x-icon'>
 </head>
@@ -22,7 +23,9 @@ header("location:Assets/php/redirect.php")
                echo "<br><br> Wrong Credentials.";
                ?>
                 <h1><b>LOGIN</b></h1><input type="Textbox" placeholder="Roll Number" id="textbox" name="username"><br><br>
-            <input type="Password" placeholder="Password" id="textbox" name="password"><br><br><input type="submit" id="button" value="Login"><br><br>Need an account? <a href='signup.php'>Sign Up</a> </center>
+            <input type="Password" placeholder="Password" id="textbox" name="password"><br><br>
+				   <div class="g-recaptcha" data-sitekey="6LdgL8EUAAAAAPvAIKd8EgHETEQwtZfCURKZaz-F"></div><br>
+				   <input type="submit" id="button" value="Login"><br><br>Need an account? <a href='signup.php'>Sign Up</a> </center>
         </form></div></div>
 </body>
 </html>
