@@ -50,7 +50,7 @@ if ( ( !isset( $_SESSION[ 'username' ] ) ) ) {
 	}
 	?>
 </body>
-</html> <<
+</html> <
 script type = "text/javascript" >
 
 	var deadline = <?php
