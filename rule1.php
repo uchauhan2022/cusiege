@@ -24,15 +24,15 @@ if((!isset($_SESSION['username'])))
    <center>	
 		<div class="divlead">
 	   <center><h3>RULES</h3></center>
-	   <ul><li> Time- 1.5 hours </li>
-<li>Venue- Online Individual Participation </li>
-<li>1 Round 20 Questions </li>
-<li>Base Weightage of Each question- 20 points</li>
-<li>If some participant answers a question right, the value of that question decreases by 1 point, while if the question is answered wrong by a participant, the value of that increases by 1 point.</li>
- <li>If the participant answers right, then he/she is awarded the points according to the value of the question at the same time. </li>
-<li>Any question can have a maximum weightage of 40 points. </li>
-<li>The participant with the highest number of points emerges as the winner.</li>
- <li>In case of a tie, time would be the judge. The quicker, the better.</li>
+	   <ul style='align:left;'><li> Time- 1.5 hours </li><br>
+<li>Venue- Online Individual Participation </li><br>
+<li>1 Round 20 Questions </li><br>
+<li>Base Weightage of Each question- 20 points</li><br>
+<li>If some participant answers a question right, the value of that question decreases by 1 point, while if the question is answered wrong by a participant, the value of that increases by 1 point.</li><br>
+ <li>If the participant answers right, then he/she is awarded the points according to the value of the question at the same time. </li><br>
+<li>Any question can have a maximum weightage of 40 points. </li><br>
+<li>The participant with the highest number of points emerges as the winner.</li><br>
+ <li>In case of a tie, time would be the judge. The quicker, the better.</li><br>
 </ul></div><br><br>
 		  <?php
 		  $now=strtotime('now');
