@@ -21,7 +21,7 @@ header("location:Assets/php/redirect.php")
                else if(isset($_SESSION["pass"]))
                echo "<br><br> Wrong Credentials.";
                ?>
-                <h1><b>LOGIN</b></h1><input type="Textbox" placeholder="Username" id="textbox" name="username"><br><br>
+                <h1><b>LOGIN</b></h1><input type="Textbox" placeholder="Roll Number" id="textbox" name="username"><br><br>
             <input type="Password" placeholder="Password" id="textbox" name="password"><br><br><input type="submit" id="button" value="Login"><br><br>Need an account? <a href='signup.php'>Sign Up</a> </center>
         </form></div></div>
 </body>
