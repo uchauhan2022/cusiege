@@ -1,4 +1,4 @@
-x<?php
+<?php
 session_start();
 include('dbconfig.php');
 if(isset($_GET['question'])){
