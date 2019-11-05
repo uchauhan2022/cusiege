@@ -11,13 +11,13 @@ session_start();
         <link rel='icon' href='icon/favicon.ico' type='image/x-icon'>
 </head>
       <body>
-      <div id="wrapper" class='div'> <div class='div'>
+      <div class='divlead'> 
       <center>
-      <?php if($_SESSION['check']==1)
-		echo '<h3>Your test has been submitted successfully.</h3>';
+      <?php 
 		  session_destroy();
 		  ?>
+		 
      	<h4>You've been logged out.</h4>
      	<h4>Click <a href="index.php">here</a> to login again.</h4>
-		  </center></div></div></body>
+		  </center></div></body>
 </html>
