@@ -22,7 +22,18 @@ if((!isset($_SESSION['username'])))
      
       
    <center>	
-		<embed src="L1.pdf" height="85%" width="100%" type="application/pdf"></embed><br><br>
+		<div class="divlead">
+	   <center><h3>RULES</h3></center>
+	   <ul><li> Time- 1.5 hours </li>
+<li>Venue- Online Individual Participation </li>
+<li>1 Round 20 Questions </li>
+<li>Base Weightage of Each question- 20 points</li>
+<li>If some participant answers a question right, the value of that question decreases by 1 point, while if the question is answered wrong by a participant, the value of that increases by 1 point.</li>
+ <li>If the participant answers right, then he/she is awarded the points according to the value of the question at the same time. </li>
+<li>Any question can have a maximum weightage of 40 points. </li>
+<li>The participant with the highest number of points emerges as the winner.</li>
+ <li>In case of a tie, time would be the judge. The quicker, the better.</li>
+</ul></div><br><br>
 		  <?php
 		  $now=strtotime('now');
 		  if(!$_SESSION['is_admin'] && $now<strtotime('05 November 2019 21:30:00'))

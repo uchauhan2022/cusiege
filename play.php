@@ -59,7 +59,7 @@ if ( $_SESSION[ 'lev' ] == 1 )
 elseif ( $_SESSION[ 'lev' ] == 2 )
 	echo '1530000';
 ?>;
-var t = ( deadline ) / 1000;
+var t = deadline ;
 var downloadTimer = setInterval( function () {
 	t--;
 	var seconds = Math . floor( ( t ) % 60 );
