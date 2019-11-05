@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("dbconfig.php");
-$ic=mysqli_real_escape_string($dbconfig,$_POST['ic']);  
+  
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
 	      

@@ -23,8 +23,15 @@ if((!isset($_SESSION['username'])))
       
    <center>	
 		<embed src="L1.pdf" height="85%" width="100%" type="application/pdf"></embed><br><br>
+		  <?php
+		  $now=strtotime('now');
+		  if(!$_SESSION['is_admin'] && $now<strtotime('05 November 2019 21:30:00'))
+		  echo 'Quiz will start ar 9:30 PM.';
+		  else 
+			 echo'
 		<form action="lev1.php" target="_parent" method="post">
 			<input type="submit" id="button" value="Start">
-		</form></center>
+		</form>';
+			 ?></center>
 		</body>
 </html>
