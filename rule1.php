@@ -38,7 +38,7 @@ if((!isset($_SESSION['username'])))
 		  $now=strtotime('now');
 		  if(!$_SESSION['is_admin'] && $now<strtotime('05 November 2019 21:30:00'))
 		  echo '<div style="color:white; font-size:23px;">Event will start at 9:30 PM.</div>';
-		  else 
+		  elseif($now<strtotime('05 November 2019 21:00:00')) 
 			 echo'
 		<form action="lev1.php" target="_parent" method="post">
 			<input type="submit" id="button" value="Start">
