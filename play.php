@@ -98,7 +98,7 @@ var downloadTimer = setInterval( function () {
 				document . finalSubmit . submit();
 			else
 			$( '#questions_div' ).html( data );
-		} );
+		
 			} );
 		} );
 	} );
