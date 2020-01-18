@@ -17,7 +17,7 @@ session_start();
 		  session_destroy();
 		  ?>
 		 
-     	<h4>You've been logged out.</h4>
+     	<h4>Your test has been submitted successfullly The results will be declared on .</h4>
      	<h4>Click <a href="index.php">here</a> to login again.</h4>
 		  </center></div></body>
 </html>
