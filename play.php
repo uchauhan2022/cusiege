@@ -55,7 +55,7 @@ if ( ( !isset( $_SESSION[ 'username' ] ) ) ) {
 
 	var deadline = <?php
 if ( $_SESSION[ 'lev' ] == 1 )
-	echo   strtotime( '05 November 2019 23:00:00' ) - strtotime( 'now' );
+	echo   strtotime( '20 January 2020 23:00:00' ) - strtotime( 'now' );
 elseif ( $_SESSION[ 'lev' ] == 2 )
 	echo '1530000';
 ?>;
