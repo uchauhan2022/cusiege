@@ -13,7 +13,7 @@ function get_question(){
 	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev1 where questionid=$qid");
 	$res=mysqli_fetch_array($query);
 
-			echo'<div class="question_div" id="question_div:'.$res['questionid'].'"><div class="question_inner_div">Question:<br> '.$id.".) ".$res['question'].'</div><div id="marks_div'.$res['questionid'].'"class="marks_div">Marks:'.$_SESSION['score'].'</div></div><div class="option_div" id="option_div'.$res['questionid'].'">';
+			echo'<div class="question_div" id="question_div:'.$res['questionid'].'"><div class="question_inner_div">Question:<br> '.$id+1.".) ".$res['question'].'</div><div id="marks_div'.$res['questionid'].'"class="marks_div">Marks:'.$_SESSION['score'].'</div></div><div class="option_div" id="option_div'.$res['questionid'].'">';
 			
 	
 	
