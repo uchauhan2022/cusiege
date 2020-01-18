@@ -43,7 +43,7 @@ if(isset($_GET['submit'])){
 	}
 
 else{
-	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev1)");
+	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev1");
 	if(mysqli_num_rows($query)==0)
 		echo 1;
 	else{
