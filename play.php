@@ -93,10 +93,12 @@ var downloadTimer = setInterval( function () {
 				qid: array[ 1 ],
 				answer: answer
 			}, function ( data ) {
-				var score = $( '#score_div' ).val();
-
-				get_questions();
-
+				
+				if(data==1)
+				document . finalSubmit . submit();
+			else
+			$( '#questions_div' ).html( data );
+		} );
 			} );
 		} );
 	} );
@@ -109,7 +111,7 @@ var downloadTimer = setInterval( function () {
 			$( '#questions_div' ).html( data );
 		} );
 	}
-	process();
+	//process();
 
 	
 </script>
