@@ -84,14 +84,7 @@ var downloadTimer = setInterval( function () {
 			$( '#rules' ).html( data );
 		} );
 		get_questions();
-		$( document ).on( 'click', '.question_div', function () {
-			var array = this.id.split( ':' );
-			$.post( 'pre.php?question', {
-				qid: array[ 1 ]
-			}, function ( data ) {
-				$( '#option_div' + array[ 1 ] ).html( data );
-			} );
-		} );
+		
 		$( document ).on( 'click', '.save_answer_button', function () {
 
 			var array = this.id.split( ':' );
