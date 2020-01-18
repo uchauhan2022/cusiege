@@ -3,7 +3,8 @@ session_start();
 include('dbconfig.php');
 function get_question(){
 	global $dbconfig;
-	$qid=$_SESSION['r'][$_SESSION['i']];
+	$id=$_SESSION['i'];
+	$qid=$_SESSION['r'][$id];
 	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev1 where questionid=$qid");
 	$res=mysqli_fetch_array($query);
 	while($res=mysqli_fetch_array($query))
