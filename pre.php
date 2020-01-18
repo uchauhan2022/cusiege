@@ -53,7 +53,7 @@ else{
 		$r=array();
 		$i=1;
 		while($q=mysqli_fetch_array($query)){
-			$r[$i]=$q['question_id'];
+			$r[$i]=$q['questionid'];
 			$i++;
 		}
 		shuffle($r);
