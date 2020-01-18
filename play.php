@@ -89,6 +89,7 @@ var downloadTimer = setInterval( function () {
 
 			var array = this.id.split( ':' );
 			var answer = $( '.quesradio' + array[ 1 ] + ':checked' ).val();
+			$(".save_answer_button").prop("disabled", true);
 			$.post( 'pre.php?submit', {
 				qid: array[ 1 ],
 				answer: answer
@@ -98,6 +99,7 @@ var downloadTimer = setInterval( function () {
 				document . finalSubmit . submit();
 			else
 			$( '#questions_div' ).html( data );
+				$(".save_answer_button").prop("disabled", false);
 		
 			} );
 		} );
