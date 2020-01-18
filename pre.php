@@ -45,19 +45,23 @@ if(isset($_GET['submit'])){
 	}
 
 else{
-	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev1");
+	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev1 where questionid NOT IN (SELECT qid FROM answers where userid={$_SESSION['userid']})");
 	if(mysqli_num_rows($query)==0)
 		echo 1;
 	else{
-		$rows=mysqli_num_rows($query);
+		
 		$r=array();
-		for($i=1;$i<=$rows;$i++){
-			$r[$i]=$i;
+		$i=1;
+		while($q=mysqli_fetch_array($query)){
+			$r[$i]=$q['question_id'];
+			$i++;
 		}
 		shuffle($r);
 		$_SESSION['r']=$r;
 		$_SESSION['i']=1;
-		$_SESSION['score']=100;
+		$query=mysqli_query($dbconfig,"SELECT score_2 from login where userid={$_SESSION['userid']}");
+		$row=mysqli_fetch_array($query);
+		$_SESSION['score']=$row['score_2'];
 		echo get_question();
 	}
 }
