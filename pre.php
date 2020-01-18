@@ -30,9 +30,11 @@ if(isset($_GET['submit'])){
 	$query=mysqli_query($dbconfig, "SELECT * from pre_lev1 where questionid=$qid");
 	$res=mysqli_fetch_array($query);
 	if($res['choice'.$res['answer']]!=$answer){
-		$query=mysqli_query($dbconfig,"UPDATE login SET score_2=score_2-5");
+		$query=mysqli_query($dbconfig,"UPDATE login SET score_2=score_2-5 where userid={$_SESSION['userid']}");
+		$query=mysqli_query($dbconfig,"SELECT score_2 from login where userid={$_SESSION['userid']}");
+		$row=mysqli_fetch_array($query);
 		
-		$_SESSION['score']=$SESSION['score']-5;
+		$_SESSION['score']=$row['score_2'];
 	}
 	else{
 		$query=mysqli_query($dbconfig,"UPDATE login SET score=score+{$_SESSION['score']}");
