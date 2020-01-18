@@ -3,7 +3,7 @@ session_start();
 include('dbconfig.php');
 function get_question(){
 	global $dbconfig;
-	if(sizeof($_SESSION['r'])<$_SESSION['i']){
+	if(sizeof($_SESSION['r'])<$_SESSION['i']+1){
 		echo 1;
 	}
 	else{
@@ -64,7 +64,7 @@ else{
 		}
 		shuffle($r);
 		$_SESSION['r']=$r;
-		$_SESSION['i']=1;
+		$_SESSION['i']=0;
 		$query=mysqli_query($dbconfig,"SELECT score_2 from login where userid={$_SESSION['userid']}");
 		$row=mysqli_fetch_array($query);
 		$_SESSION['score']=$row['score_2'];
