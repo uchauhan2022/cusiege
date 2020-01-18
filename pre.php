@@ -3,6 +3,10 @@ session_start();
 include('dbconfig.php');
 function get_question(){
 	global $dbconfig;
+	if(sizeof($_SESSION['r'])<$id){
+		echo 1;
+	}
+	else{
 	$id=$_SESSION['i'];
 	$qid=$_SESSION['r'][$id];
 	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev1 where questionid=$qid");
@@ -22,6 +26,7 @@ function get_question(){
 					}
 			echo '<input type="submit" value="Save Answer" class="save_answer_button button" id="save_answer:'.$res['questionid'].'"><br><br>
 			</div>';
+}
 }
 
 if(isset($_GET['submit'])){
