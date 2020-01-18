@@ -3,7 +3,7 @@ session_start();
 include('dbconfig.php');
 function get_question(){
 	global $dbconfig;
-	if(sizeof($_SESSION['r'])<$id){
+	if(sizeof($_SESSION['r'])<$_SESSION['i']){
 		echo 1;
 	}
 	else{
