@@ -7,7 +7,7 @@ function get_question(){
 		echo 1;
 	}
 	else{
-		echo sizeof($_SESSION['r']);
+		
 	$id=$_SESSION['i'];
 	$qid=$_SESSION['r'][$id];
 	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev1 where questionid=$qid");
