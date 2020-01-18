@@ -5,7 +5,6 @@ function get_question(){
 	global $dbconfig;
 	$id=$_SESSION['i'];
 	$qid=$_SESSION['r'][$id];
-	echo $qid;
 	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev1 where questionid=$qid");
 	$res=mysqli_fetch_array($query);
 
@@ -33,7 +32,7 @@ if(isset($_GET['submit'])){
 	if($res['choice'.$res['answer']]!=$answer){
 		$query=mysqli_query($dbconfig,"UPDATE login SET score_2=score_2-5");
 		
-		$_SESSION['score']-=5;
+		$_SESSION['score']=$SESSION['score']-5;
 	}
 	else{
 		$query=mysqli_query($dbconfig,"UPDATE login SET score=score+{$_SESSION['score']}");
