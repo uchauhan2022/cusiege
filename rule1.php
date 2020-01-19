@@ -48,14 +48,7 @@ if((!isset($_SESSION['username'])))
 	</div></div><form method="post" action="" name="finalSubmit"></form>
 	<script type = "text/javascript">
 
-	var deadline = <?php
-if ( $_SESSION[ \'lev\' ] == 1 )
-	echo   strtotime( \'22 January 2020 22:00:00\' ) - strtotime( \'now\' );
-elseif ( $_SESSION[ \'lev\' ] == 2 )
-	echo  strtotime( \'24 January 2020 22:00:00\' ) - strtotime( \'now\' );
-		elseif ( $_SESSION[ \'lev\' ] == 3 )
-	echo  strtotime( \'26 January 2020 22:00:00\' ) - strtotime( \'now\' );
-?>;
+	var deadline = '.strtotime("22 January 2020 20:00:00").'
 var t = deadline ;
 var downloadTimer = setInterval( function () {
 	t--;
