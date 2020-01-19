@@ -36,7 +36,7 @@ if((!isset($_SESSION['username'])))
 </ul></div><br><br>
 		  <?php
 		  $now=strtotime('now');
-		  if(!$_SESSION['is_admin'] && $now<strtotime('05 November 2019 21:30:00'))
+		  if(!$_SESSION['is_admin'] && $now<strtotime('22 January 2019 22:00:00'))
 		  echo '<div style="color:white; font-size:23px;">Event will start at 9:30 PM.</div>';
 		  else 
 			 echo'
