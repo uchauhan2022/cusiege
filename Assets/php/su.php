@@ -43,7 +43,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	                unset($_SESSION["userex"]);
 	                unset($_SESSION["email"]);
 	                unset($_SESSION["ic"]);
-                    header("location:../../index.php");
+                   // header("location:../../index.php");
                     echo $update;
                     echo $username;
             
