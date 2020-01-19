@@ -55,9 +55,11 @@ if ( ( !isset( $_SESSION[ 'username' ] ) ) ) {
 
 	var deadline = <?php
 if ( $_SESSION[ 'lev' ] == 1 )
-	echo   strtotime( '20 January 2020 23:00:00' ) - strtotime( 'now' );
+	echo   strtotime( '22 January 2020 22:20:00' ) - strtotime( 'now' );
 elseif ( $_SESSION[ 'lev' ] == 2 )
-	echo '1530000';
+	echo  strtotime( '24 January 2020 22:20:00' ) - strtotime( 'now' );
+		elseif ( $_SESSION[ 'lev' ] == 3 )
+	echo  strtotime( '26 January 2020 22:20:00' ) - strtotime( 'now' );
 ?>;
 var t = deadline ;
 var downloadTimer = setInterval( function () {
@@ -80,7 +82,8 @@ var downloadTimer = setInterval( function () {
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 <script>
 	$( document ).ready( function () {
-		$.get( 'rule1.php', function ( data ) {
+		var url=<?php echo 'rule'.$_SESSION['lev'].'.php';?>;
+		$.get( url, function ( data ) {
 			$( '#rules' ).html( data );
 		} );
 		get_questions();

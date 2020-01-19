@@ -45,13 +45,13 @@ if(isset($_GET['submit'])){
 	else{
 		$query=mysqli_query($dbconfig,"UPDATE login SET score_lev".$_SESSION['lev']."=score_lev".$_SESSION['lev']."+{$_SESSION['score']} where userid={$_SESSION['userid']}");
 	}
-	$query=mysqli_query($dbconfig,"insert into answers (userid,qid,answer) VALUES ({$_SESSION['userid']},$qid,'$answer')");
+	$query=mysqli_query($dbconfig,"insert into answers (userid,qid,answer,level) VALUES ({$_SESSION['userid']},$qid,'$answer',{$_SESSION['lev']})");
 	$_SESSION['i']++;
 	echo get_question();		
 	}
 
 else{
-	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev".$_SESSION['lev']." where questionid NOT IN (SELECT qid FROM answers where userid={$_SESSION['userid']})");
+	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev".$_SESSION['lev']." where questionid NOT IN (SELECT qid FROM answers where userid={$_SESSION['userid']} AND level={$_SESSION['lev']})");
 	if(mysqli_num_rows($query)==0)
 		echo 1;
 	else{
