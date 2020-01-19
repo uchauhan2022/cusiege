@@ -1,7 +1,7 @@
 <?php
 $host = 'localhost';
-$username = 'enter username';
-$password = 'enter pass';
-$database = 'enter database name';
+$username='root';
+$password = 'Popat#Panda@1234$';
+$database = 'cusiege';
 $dbconfig = mysqli_connect($host,$username,$password,$database);
 ?>
