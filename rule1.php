@@ -37,7 +37,7 @@ if((!isset($_SESSION['username'])))
 		  <?php
 		  $now=strtotime('now');
 		  if(!$_SESSION['is_admin'] && $now<strtotime('22 January 2020 22:00:00'))
-			  $time=strtotime("22 January 2020 20:00:00")-strtotime('now');
+		  { $time=strtotime("22 January 2020 20:00:00")-strtotime('now');
 		  echo '<div style="color:white; font-size:23px;">Event will start in <div id="clockdiv" style="
     zoom: 0.4;
 		  -moz-transform: scale(0.4);
@@ -69,7 +69,7 @@ var downloadTimer = setInterval( function () {
 
 
 
-</script>';
+</script>';}
 		  else 
 			 echo'
 		<form action="lev1.php" target="_parent" method="post">
