@@ -62,7 +62,7 @@ var downloadTimer = setInterval( function () {
 	var seconds = Math . floor( ( t ) % 60 );
 	var minutes = Math . floor( ( t / 60 ) % 60 );
 	var hours = Math . floor( ( t / ( 60 * 60 ) ) % 24 );
-	var days = var days = Math.floor(t / (1000 * 60 * 60 * 24));
+	var days = var days = Math.floor(t / ( 60 * 60 * 24));
 	document . getElementById( "days" ) . textContent = ( \'0\' + days ) . slice( -2 );
 	document . getElementById( "hours" ) . textContent = ( \'0\' + hours ) . slice( -2 );
 	document . getElementById( "minutes" ) . textContent = ( \'0\' + minutes ) . slice( -2 );
