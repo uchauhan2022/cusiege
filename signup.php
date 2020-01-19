@@ -26,7 +26,7 @@ header("location:play.php")
 					echo "<br><br>The Secret Code entered is invalid.";
 					else if (isset($_SESSION["userex"]))
 					echo "<br><br>The Roll No. is already registered."?>
-                <h1><b>SIGN UP</b></h1><input type="text" placeholder="Name" id="textbox" name="name" required><br><br><input type="email" placeholder="Email" id="textbox" name="email" required><br><br><input type="text" placeholder="Roll No." id="textbox" name="username" required><br><br>
+                <h1><b>SIGN UP</b></h1><input type="text" placeholder="Name" id="textbox" name="name" required><br><br><input type="email" placeholder="Email" id="textbox" name="email" required><br><br><input type="text" placeholder="Roll No." id="textbox" name="username" required><br><br><input type="text" placeholder="Mobile No." id="textbox" name="mobile" required><br><br>
             <input type="Password" placeholder="Password" id="textbox2" name="password" required><br><br><input type="Password" placeholder="Confirm Password" id="textbox1" name="password1" required><br><br><input type="submit" id="button" value="SignUp"><br><br>Already have an account? <a href='index.php'>Log In</a>
  </center>
         </form></div></div>

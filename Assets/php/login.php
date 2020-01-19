@@ -17,6 +17,7 @@ if($count==1)
 $_SESSION['username']=$row['username'];
 	$_SESSION['team']=$row['name'];
 	$_SESSION['is_admin']=$row['is_admin'];
+	$_SESSION['lev']=$row['level'];
 unset($_SESSION['pass']);
 	$now=date("d M Y H:i:s",strtotime("now")+19800);
  $myfile = fopen("../../Entries/".$username.".txt", "a+");
