@@ -41,11 +41,11 @@ if((!isset($_SESSION['username'])))
     zoom: 0.4;
 		  -moz-transform: scale(0.4);
 		  text-align:center;">
-	<div><span class="hours" id="days">00</span><div class="smalltext">Days</div></div>
+	<div><span class="days" id="days">00</span><div class="smalltext">Days</div></div>
 	<div><span class="hours" id="hours">00</span><div class="smalltext">Hours</div></div>
 	<div><span class="minutes" id="minutes">00</span><div class="smalltext">Minutes</div></div>
 	<div><span class="seconds" id="seconds">00</span><div class="smalltext">Seconds</div></div>
-	</div></div><form method="post" action="finish.php" name="finalSubmit"></form>
+	</div></div><form method="post" action="" name="finalSubmit"></form>
 	<script type = "text/javascript">
 
 	var deadline = <?php
