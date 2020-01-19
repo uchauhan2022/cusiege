@@ -37,13 +37,14 @@ if((!isset($_SESSION['username'])))
 		  <?php
 		  $now=strtotime('now');
 		  if(!$_SESSION['is_admin'] && $now<strtotime('22 January 2020 22:00:00'))
-		  echo '<div style="color:white; font-size:23px;">Event will start in <div class="sub_navbartimer"><div id="clockdiv" style="
+		  echo '<div style="color:white; font-size:23px;">Event will start in <div id="clockdiv" style="
     zoom: 0.4;
 		  -moz-transform: scale(0.4);"><span id="tl">Time Left :</span>
+	<div><span class="hours" id="days">00</span><div class="smalltext">Days</div></div>
 	<div><span class="hours" id="hours">00</span><div class="smalltext">Hours</div></div>
 	<div><span class="minutes" id="minutes">00</span><div class="smalltext">Minutes</div></div>
 	<div><span class="seconds" id="seconds">00</span><div class="smalltext">Seconds</div></div>
-	</div></div><form method="post" action="finish.php" name="finalSubmit"></form>.</div>
+	</div></div><form method="post" action="finish.php" name="finalSubmit"></form>
 	<script type = "text/javascript">
 
 	var deadline = <?php
@@ -60,6 +61,8 @@ var downloadTimer = setInterval( function () {
 	var seconds = Math . floor( ( t ) % 60 );
 	var minutes = Math . floor( ( t / 60 ) % 60 );
 	var hours = Math . floor( ( t / ( 60 * 60 ) ) % 24 );
+	var days = var days = Math.floor(t / (1000 * 60 * 60 * 24));
+	document . getElementById( "days" ) . textContent = ( \'0\' + days ) . slice( -2 );
 	document . getElementById( "hours" ) . textContent = ( \'0\' + hours ) . slice( -2 );
 	document . getElementById( "minutes" ) . textContent = ( \'0\' + minutes ) . slice( -2 );
 	document . getElementById( "seconds" ) . textContent = ( \'0\' + seconds ) . slice( -2 );
