@@ -39,7 +39,8 @@ if((!isset($_SESSION['username'])))
 		  if(!$_SESSION['is_admin'] && $now<strtotime('22 January 2020 22:00:00'))
 		  echo '<div style="color:white; font-size:23px;">Event will start in <div id="clockdiv" style="
     zoom: 0.4;
-		  -moz-transform: scale(0.4);"><span id="tl">Time Left :</span>
+		  -moz-transform: scale(0.4);
+		  text-align:center;">
 	<div><span class="hours" id="days">00</span><div class="smalltext">Days</div></div>
 	<div><span class="hours" id="hours">00</span><div class="smalltext">Hours</div></div>
 	<div><span class="minutes" id="minutes">00</span><div class="smalltext">Minutes</div></div>
