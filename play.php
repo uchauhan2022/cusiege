@@ -45,7 +45,7 @@ if ( ( !isset( $_SESSION[ 'username' ] ) ) ) {
 	if ( isset( $_SESSION[ 'start' ] ) ) {
 
 		echo '<div id="questions_div"></div>';
-	} elseif ( $_SESSION[ 'lev' ] == 1 ) {
+	} elseif ( isset($_SESSION[ 'lev' ]) ) {
 		echo '<div id="rules"></div>';
 	}
 	?>
