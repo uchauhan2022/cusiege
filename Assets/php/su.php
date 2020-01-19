@@ -38,7 +38,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         }
     else 
         {
-                    $update=mysqli_query($dbconfig,"INSERT INTO login (email,username,number,password,name) VALUES ('$email','$username','$mobile','$password','$name')");
+                    $update=mysqli_query($dbconfig,"INSERT INTO login (email,username,number,password,name) VALUES ('$email','$username',$mobile,'$password','$name')");
 	                $_SESSION["register"]=1;
 	                unset($_SESSION["userex"]);
 	                unset($_SESSION["email"]);
