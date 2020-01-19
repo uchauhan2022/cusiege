@@ -48,7 +48,7 @@ if((!isset($_SESSION['username'])))
 	</div></div><form method="post" action="" name="finalSubmit"></form>
 	<script type = "text/javascript">
 
-	var deadline = '.strtotime("22 January 2020 20:00:00").'
+	var deadline = '.strtotime("22 January 2020 20:00:00")-strtotime(now).'
 var t = deadline ;
 var downloadTimer = setInterval( function () {
 	t--;
