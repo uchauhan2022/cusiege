@@ -43,7 +43,7 @@ if(isset($_GET['submit'])){
 		$_SESSION['score']=$row["marks_lev".$_SESSION['lev']];
 	}
 	else{
-		$query=mysqli_query($dbconfig,"UPDATE login SET score_lev".$_SESSION['lev']."=score_lev".$_SESSION['lev']."+{$_SESSION['score']} where userid={$_SESSION['user_id']}");
+		$query=mysqli_query($dbconfig,"UPDATE login SET score_lev".$_SESSION['lev']."=score_lev".$_SESSION['lev']."+{$_SESSION['score']} where userid={$_SESSION['userid']}");
 	}
 	$query=mysqli_query($dbconfig,"insert into answers (userid,qid,answer) VALUES ({$_SESSION['userid']},$qid,'$answer')");
 	$_SESSION['i']++;
