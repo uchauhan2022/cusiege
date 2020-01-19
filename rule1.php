@@ -37,6 +37,7 @@ if((!isset($_SESSION['username'])))
 		  <?php
 		  $now=strtotime('now');
 		  if(!$_SESSION['is_admin'] && $now<strtotime('22 January 2020 22:00:00'))
+			  $time=strtotime("22 January 2020 20:00:00")-strtotime('now');
 		  echo '<div style="color:white; font-size:23px;">Event will start in <div id="clockdiv" style="
     zoom: 0.4;
 		  -moz-transform: scale(0.4);
@@ -48,7 +49,7 @@ if((!isset($_SESSION['username'])))
 	</div></div><form method="post" action="" name="finalSubmit"></form>
 	<script type = "text/javascript">
 
-	var deadline = '.strtotime("22 January 2020 20:00:00")-strtotime('now').'
+	var deadline = '.$time.'
 var t = deadline ;
 var downloadTimer = setInterval( function () {
 	t--;
