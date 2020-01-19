@@ -62,14 +62,15 @@ elseif ( $_SESSION[ 'lev' ] == 2 )
 	echo  strtotime( '26 January 2020 22:20:00' ) - strtotime( 'now' );
 ?>;
 var t = deadline ;
-var downloadTimer = setInterval( function () {
+<?php if(isset($_SESSION['start'])){
+	echo "var downloadTimer = setInterval( function () {
 	t--;
 	var seconds = Math . floor( ( t ) % 60 );
 	var minutes = Math . floor( ( t / 60 ) % 60 );
 	var hours = Math . floor( ( t / ( 60 * 60 ) ) % 24 );
-	document . getElementById( "hours" ) . textContent = ( '0' + hours ) . slice( -2 );
-	document . getElementById( "minutes" ) . textContent = ( '0' + minutes ) . slice( -2 );
-	document . getElementById( "seconds" ) . textContent = ( '0' + seconds ) . slice( -2 );
+	document . getElementById( 'hours' ) . textContent = ( '0' + hours ) . slice( -2 );
+	document . getElementById( 'minutes' ) . textContent = ( '0' + minutes ) . slice( -2 );
+	document . getElementById( 'seconds' ) . textContent = ( '0' + seconds ) . slice( -2 );
 	if ( t <= 0 ) {
 		clearInterval( downloadTimer );
 		document . finalSubmit . submit();
@@ -78,7 +79,9 @@ var downloadTimer = setInterval( function () {
 
 
 
-</script>
+";}
+	?>
+	</script>
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 <script>
 	$( document ).ready( function () {
