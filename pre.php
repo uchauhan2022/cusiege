@@ -10,10 +10,10 @@ function get_question(){
 		
 	$id=$_SESSION['i'];
 	$qid=$_SESSION['r'][$id];
-	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev1 where questionid=$qid");
+	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev".$_SESSION['lev']." where questionid=$qid");
 	$res=mysqli_fetch_array($query);
 
-			echo'<div class="question_div" id="question_div:'.$res['questionid'].'"><div class="question_inner_div">Question:<br> '.($id+1).".) ".$res['question'].'</div><div id="marks_div'.$res['questionid'].'"class="marks_div">Marks:'.$_SESSION['score'].'</div></div><div class="option_div" id="option_div'.$res['questionid'].'">';
+			echo'<div class="question_div" id="question_div:'.$res['questionid'].'"><div class="question_inner_div">Question:<br> '.($id+1).".) ".$res['question'].'</div><div id="marks_div'.$res['questionid'].'"class="marks_div">Maximum Marks:'.$_SESSION['score'].'</div></div><div class="option_div" id="option_div'.$res['questionid'].'">';
 			
 	
 	
@@ -33,17 +33,17 @@ function get_question(){
 if(isset($_GET['submit'])){
 	$qid=$_SESSION['r'][$_SESSION['i']];
 	$answer=mysqli_real_escape_string($dbconfig,$_POST['answer']);
-	$query=mysqli_query($dbconfig, "SELECT * from pre_lev1 where questionid=$qid");
+	$query=mysqli_query($dbconfig, "SELECT * from pre_lev".$_SESSION['lev']." where questionid=$qid");
 	$res=mysqli_fetch_array($query);
 	if($res['choice'.$res['answer']]!=$answer){
-		$query=mysqli_query($dbconfig,"UPDATE login SET score_2=score_2-5 where userid={$_SESSION['userid']}");
-		$query=mysqli_query($dbconfig,"SELECT score_2 from login where userid={$_SESSION['userid']}");
+		$query=mysqli_query($dbconfig,"UPDATE login SET marks_lev".$_SESSION['lev']."=marks_lev".$_SESSION['lev']."-5 where userid={$_SESSION['userid']}");
+		$query=mysqli_query($dbconfig,"SELECT marks_lev".$_SESSION['lev']." from login where userid={$_SESSION['userid']}");
 		$row=mysqli_fetch_array($query);
 		
-		$_SESSION['score']=$row['score_2'];
+		$_SESSION['score']=$row["marks_lev".$_SESSION['lev']];
 	}
 	else{
-		$query=mysqli_query($dbconfig,"UPDATE login SET score=score+{$_SESSION['score']}");
+		$query=mysqli_query($dbconfig,"UPDATE login SET score_lev".$_SESSION['lev']."=score_lev".$_SESSION['lev']."+{$_SESSION['score']}");
 	}
 	$query=mysqli_query($dbconfig,"insert into answers (userid,qid,answer) VALUES ({$_SESSION['userid']},$qid,'$answer')");
 	$_SESSION['i']++;
@@ -51,7 +51,7 @@ if(isset($_GET['submit'])){
 	}
 
 else{
-	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev1 where questionid NOT IN (SELECT qid FROM answers where userid={$_SESSION['userid']})");
+	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev".$_SESSION['lev']." where questionid NOT IN (SELECT qid FROM answers where userid={$_SESSION['userid']})");
 	if(mysqli_num_rows($query)==0)
 		echo 1;
 	else{
@@ -65,9 +65,9 @@ else{
 		shuffle($r);
 		$_SESSION['r']=$r;
 		$_SESSION['i']=0;
-		$query=mysqli_query($dbconfig,"SELECT score_2 from login where userid={$_SESSION['userid']}");
+		$query=mysqli_query($dbconfig,"SELECT marks_lev".$_SESSION['lev']." from login where userid={$_SESSION['userid']}");
 		$row=mysqli_fetch_array($query);
-		$_SESSION['score']=$row['score_2'];
+		$_SESSION['score']=$row["marks_lev".$_SESSION['lev']];
 		echo get_question();
 	}
 }

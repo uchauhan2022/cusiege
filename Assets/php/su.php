@@ -15,6 +15,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	
 	$email=mysqli_real_escape_string($dbconfig,$_POST['email']);
 	$name=mysqli_real_escape_string($dbconfig,$_POST['name']);
+	$mobile=mysqli_real_escape_string($dbconfig,$_POST['mobile']);
     $sql_query="SELECT userid, username FROM login WHERE email='$email'";
     $result=mysqli_query($dbconfig,$sql_query);
     $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
@@ -37,7 +38,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         }
     else 
         {
-                    $update=mysqli_query($dbconfig,"INSERT INTO login (email,username,password,name) VALUES ('$email','$username','$password','$name')");
+                    $update=mysqli_query($dbconfig,"INSERT INTO login (email,username,mobile,password,name) VALUES ('$email','$username','$mobile','$password','$name')");
 	                $_SESSION["register"]=1;
 	                unset($_SESSION["userex"]);
 	                unset($_SESSION["email"]);
