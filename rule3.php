@@ -36,8 +36,40 @@ if((!isset($_SESSION['username'])))
 </ul></div><br><br>
 		  <?php
 		  $now=strtotime('now');
-		  if(!$_SESSION['is_admin'] && $now<strtotime('26 January 2019 22:00:00'))
-		  echo '<div style="color:white; font-size:23px;">Event will start at 9:30 PM.</div>';
+		  if(!$_SESSION['is_admin'] && $now<strtotime('26 January 2020 22:00:00'))
+		  { $time=strtotime("22 January 2020 20:00:00")-strtotime('now');
+		  echo '<div style="color:white; font-size:23px;">Event will start in <div id="clockdiv" style="
+    zoom: 0.4;
+		  -moz-transform: scale(0.4);
+		  text-align:center;">
+	<div><span class="days" id="days">00</span><div class="smalltext">Days</div></div>
+	<div><span class="hours" id="hours">00</span><div class="smalltext">Hours</div></div>
+	<div><span class="minutes" id="minutes">00</span><div class="smalltext">Minutes</div></div>
+	<div><span class="seconds" id="seconds">00</span><div class="smalltext">Seconds</div></div>
+	</div></div><form method="post" action="" name="finalSubmit"></form>
+	<script type = "text/javascript">
+
+	var deadline = '.$time.'
+var t = deadline ;
+var downloadTimer = setInterval( function () {
+	t--;
+	var seconds = Math . floor( ( t ) % 60 );
+	var minutes = Math . floor( ( t / 60 ) % 60 );
+	var hours = Math . floor( ( t / ( 60 * 60 ) ) % 24 );
+	var days = Math . floor(t / ( 60 * 60 * 24 ));
+	document . getElementById( "days" ) . textContent = ( \'0\' + days ) . slice( -2 );
+	document . getElementById( "hours" ) . textContent = ( \'0\' + hours ) . slice( -2 );
+	document . getElementById( "minutes" ) . textContent = ( \'0\' + minutes ) . slice( -2 );
+	document . getElementById( "seconds" ) . textContent = ( \'0\' + seconds ) . slice( -2 );
+	if ( t <= 0 ) {
+		clearInterval( downloadTimer );
+		document . finalSubmit . submit();
+	}
+}, 1000 );
+
+
+
+</script>';}
 		  else 
 			 echo'
 		<form action="lev1.php" target="_parent" method="post">
