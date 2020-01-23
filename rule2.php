@@ -24,23 +24,19 @@ if((!isset($_SESSION['username'])))
    <center>	
 		<div class="divlead">
 	   <center><h3>RULES</h3></center>
-	   <ul style='align:left;'><li> Time- 1.5 hours </li><br>
-<li>Venue- Online Individual Participation </li><br>
-<li>1 Round 20 Questions </li><br>
-<li>Base Weightage of Each question- 40 points</li><br>
-<li>If some participant answers a question right, the value of that question decreases by 1 point, while if the question is answered wrong by a participant, the value of that increases by 1 point.</li><br>
- <li>If the participant answers right, then he/she is awarded the points according to the value of the question at the same time. </li><br>
-<li>Any question can have a maximum weightage of 40 points. </li><br>
-<li>The participant with the highest number of points emerges as the winner.</li><br>
- <li>In case of a tie, time would be the judge. The quicker, the better.</li><br>
+	   <ul style='align:left;'><li>1.The Event will last for a total of 10 min and no extra time will be provided to any participant</li><br>
+		   <li>2.It will contain a total of 20 questions with no specific time on every single question</li><br>
+		   <li>3. You will not be allowed to move to the next question before answering the current one.</li><br>
+<li>4. Every time you get a question wrong, the weightage of the next question decreases by 50 points. </li><br>
+		   <li>5.The right to declare any answer correct and incorrect will be retained by EDC.</li><br>
 </ul></div><br><br>
 		  <?php
 		  $now=strtotime('now');
-		  if(!$_SESSION['is_admin'] && $now<strtotime('24 January 2020 22:00:00'))
-		  { $time=strtotime("22 January 2020 20:00:00")-strtotime('now');
+		  if(!$_SESSION['is_admin'] && $now<strtotime('25 January 2020 22:00:00'))
+		  { $time=strtotime("25 January 2020 22:00:00")-strtotime('now');
 		  echo '<div style="color:white; font-size:23px;">Event will start in <div id="clockdiv" style="
-    zoom: 0.4;
-		  -moz-transform: scale(0.4);
+   //zoom: 0.4;
+		//-moz-transform: scale(0.4);
 		  text-align:center;">
 	<div><span class="days" id="days">00</span><div class="smalltext">Days</div></div>
 	<div><span class="hours" id="hours">00</span><div class="smalltext">Hours</div></div>

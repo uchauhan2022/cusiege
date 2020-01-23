@@ -54,12 +54,9 @@ if ( ( !isset( $_SESSION[ 'username' ] ) ) ) {
 <script type = "text/javascript">
 
 	var deadline = <?php
-if ( $_SESSION[ 'lev' ] == 1 )
-	echo   strtotime( '24 January 2020 22:30:00' ) - strtotime( 'now' );
-elseif ( $_SESSION[ 'lev' ] == 2 )
-	echo  strtotime( '25 January 2020 22:30:00' ) - strtotime( 'now' );
-		elseif ( $_SESSION[ 'lev' ] == 3 )
-	echo  strtotime( '26 January 2020 22:30:00' ) - strtotime( 'now' );
+if ( $_SESSION[ 'lev' ])
+	echo   $_SESSION['start_time']+600 - strtotime( 'now' );
+
 ?>;
 var t = deadline ;
 <?php if(isset($_SESSION['start'])){

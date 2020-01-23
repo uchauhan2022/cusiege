@@ -9,7 +9,8 @@ else
 	{
 		$_SESSION['table']="lev1";
 		$_SESSION['start']=1;
-		$query=mysqli_query($dbconfig,"INSERT INTO results (userid) VALUES ({$_SESSION['userid']})");
+		$query=mysqli_query($dbconfig,"UPDATE login SET start_time=CURRENT_TIMESTAMP where userid={$_SESSION['userid']}");
+		$_SESSION['start_time']=strtotime("now");
 		header("location:play.php");
 	}
 }
