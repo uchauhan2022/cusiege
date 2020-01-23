@@ -32,11 +32,11 @@ if((!isset($_SESSION['username'])))
 </ul></div><br><br>
 		  <?php
 		  $now=strtotime('now');
-		  if(!$_SESSION['is_admin'] && $now<strtotime('22 January 2020 22:00:00'))
-		  { $time=strtotime("24 January 2020 20:00:00")-strtotime('now');
+		  if(!$_SESSION['is_admin'] && $now<strtotime('24 January 2020 22:00:00'))
+		  { $time=strtotime("24 January 2020 22:00:00")-strtotime('now');
 		  echo '<div style="color:white; font-size:23px;">Event will start in <div id="clockdiv" style="
-    zoom: 0.4;
-		  -moz-transform: scale(0.4);
+   //zoom: 0.4;
+		//-moz-transform: scale(0.4);
 		  text-align:center;">
 	<div><span class="days" id="days">00</span><div class="smalltext">Days</div></div>
 	<div><span class="hours" id="hours">00</span><div class="smalltext">Hours</div></div>
