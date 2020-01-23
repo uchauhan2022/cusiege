@@ -14,10 +14,18 @@ session_start();
       <div class='divlead'> 
       <center>
       <?php 
+		  if (isset($_SESSION['start'])){
+			  echo '<h4>Your test has been submitted successfully.</h4>';
+		  }
+		  else
+			  
+		  {
+			  echo '<h4>You have been logged out.</h4>';
+		  }
 		  session_destroy();
 		  ?>
 		 
-     	<h4>Your test has been submitted successfullly The results will be declared on .</h4>
+     	
      	<h4>Click <a href="index.php">here</a> to login again.</h4>
 		  </center></div></body>
 </html>
