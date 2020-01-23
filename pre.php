@@ -13,7 +13,7 @@ function get_question(){
 	$query=mysqli_query($dbconfig,"SELECT * FROM pre_lev".$_SESSION['lev']." where questionid=$qid");
 	$res=mysqli_fetch_array($query);
 
-			echo'<div class="question_div" id="question_div:'.$res['questionid'].'"><div class="question_inner_div">Question:<br> '.($id+1).".) ".$res['question'].'</div><div id="marks_div'.$res['questionid'].'"class="marks_div">Maximum Marks:'.$_SESSION['score'].'</div></div><div class="option_div" id="option_div'.$res['questionid'].'">';
+			echo'<div class="question_div" id="question_div:'.$res['questionid'].'"><div class="question_inner_div">Question:<br> '.($id+1).".) ".htmlspecialchars($res['question']).'</div><div id="marks_div'.$res['questionid'].'"class="marks_div">Maximum Marks:'.$_SESSION['score'].'</div></div><div class="option_div" id="option_div'.$res['questionid'].'">';
 			
 	
 	
@@ -21,7 +21,7 @@ function get_question(){
 	<h3>Options</h3>";
   					for($op=1;$op<5;$op++)
     				{
-						echo '<div class="radiobtn"><input type="radio" name="'.$res['questionid'].'" class="quesradio'.$res['questionid'].'" id="'.$res['questionid'].'-'.$op.'" value="'.$res['choice'.$op].'"><label for="'.$res['questionid'].'-'.$op.'">'.$res['choice'.$op].'</label></div>';
+						echo '<div class="radiobtn"><input type="radio" name="'.$res['questionid'].'" class="quesradio'.$res['questionid'].'" id="'.$res['questionid'].'-'.$op.'" value="'.$res['choice'.$op].'"><label for="'.$res['questionid'].'-'.$op.'">'.htmlspecialchars($res['choice'.$op]).'</label></div>';
 						echo '<br> <br>';
 						
 					}
